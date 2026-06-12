@@ -1,3 +1,19 @@
+> ## ⚡ Fork note — gfx1103 / Radeon 780M decode fix
+>
+> This fork adds a **one‑file MMVQ `nwarps=1` decode fix for the AMD Radeon 780M (gfx1103 / Phoenix iGPU)** — **+22–36% token generation** on current master (Gemma‑4‑26B‑A4B), gfx1103‑only, everything else unchanged.
+>
+> **→ Details, benchmarks & how to apply: [`GFX1103-780M-FIX.md`](GFX1103-780M-FIX.md)** · patch: [`GFX1103-780M-FIX.patch`](GFX1103-780M-FIX.patch) · branch: `gfx1103-mmvq-nwarps`
+>
+> | quant | stock tg128 | this fix |
+> |---|--:|--:|
+> | Q4_K_M | 17.77 | 22.80 (+28%) |
+> | Q6_K | 15.66 | 19.09 (+22%) |
+> | Q8_0 | 12.81 | 17.40 (+36%) |
+>
+> *The rest of this README is upstream llama.cpp's.*
+
+---
+
 # llama.cpp
 
 ![llama](https://user-images.githubusercontent.com/1991296/230134379-7181e485-c521-4d23-a0d6-f7b3b61ba524.png)
